@@ -29,9 +29,9 @@
 // const fs = require('fs');
 // const path = require('path');
 // const dirPath = path.join(__dirname, 'files');
-// // for (i=1;i<=5;i++){
-// //     fs.writeFileSync(path.join(dirPath, `/file${i}.txt`), `file${i}`);
-// // }
+// for (i=1;i<=5;i++){
+//     fs.writeFileSync(path.join(dirPath, `/file${i}.txt`), `file${i}`);
+// }
 // const readdir = (dirPath,(err,files)=>{
 //     files.forEach((item)=>{
 //         console.log(item);
@@ -67,25 +67,27 @@
 // });
 // app.listen(3000);
 
-// const express = require("express");
-// const path = require("path");
-// const app = express();
-// const publicPath = path.join(__dirname, "public");
 
-// app.set('view engine', 'ejs');
-// app.get('',(req,res)=>{
-//     res.render('profile');
-// });
-// app.get('/about',(req,res)=>{
-//     res.sendFile(`${publicPath}/about.html`);
-// });
-// app.get('/help',(req,res)=>{
-//     res.sendFile(`${publicPath}/help.html`);
-// });
-// app.get('*',(req,res)=>{
-//     res.sendFile(`${publicPath}/404.html`);
-// });
-// app.listen(3000);
+
+const express = require("express");
+const path = require("path");
+const app = express();
+const publicPath = path.join(__dirname, "public");
+
+app.set('view engine', 'ejs');
+app.get('',(req,res)=>{
+    res.render('profile');
+});
+app.get('/about',(req,res)=>{
+    res.sendFile(`${publicPath}/about.html`);
+});
+app.get('/help',(req,res)=>{
+    res.sendFile(`${publicPath}/help.html`);
+});
+app.get('*',(req,res)=>{
+    res.sendFile(`${publicPath}/404.html`);
+});
+app.listen(3000);
 
 // application level middleware
 
