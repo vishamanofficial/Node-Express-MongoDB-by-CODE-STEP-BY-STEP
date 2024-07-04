@@ -8,4 +8,5 @@ const updateData = async () => {
         }
     )
 }
+
 updateData();
