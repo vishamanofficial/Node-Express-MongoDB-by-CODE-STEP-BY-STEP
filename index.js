@@ -69,25 +69,25 @@
 
 
 
-const express = require("express");
-const path = require("path");
-const app = express();
-const publicPath = path.join(__dirname, "public");
+// const express = require("express");
+// const path = require("path");
+// const app = express();
+// const publicPath = path.join(__dirname, "public");
 
-app.set('view engine', 'ejs');
-app.get('',(req,res)=>{
-    res.render('profile');
-});
-app.get('/about',(req,res)=>{
-    res.sendFile(`${publicPath}/about.html`);
-});
-app.get('/help',(req,res)=>{
-    res.sendFile(`${publicPath}/help.html`);
-});
-app.get('*',(req,res)=>{
-    res.sendFile(`${publicPath}/404.html`);
-});
-app.listen(3000);
+// app.set('view engine', 'ejs');
+// app.get('',(req,res)=>{
+//     res.render('profile');
+// });
+// app.get('/about',(req,res)=>{
+//     res.sendFile(`${publicPath}/about.html`);
+// });
+// app.get('/help',(req,res)=>{
+//     res.sendFile(`${publicPath}/help.html`);
+// });
+// app.get('*',(req,res)=>{
+//     res.sendFile(`${publicPath}/404.html`);
+// });
+// app.listen(3000);
 
 // application level middleware
 
@@ -185,28 +185,54 @@ app.listen(3000);
 
 // 39
 
-// const mongoose = require("mongoose");
+const mongoose = require("mongoose");
 
-// const main = async () => {
-//   await mongoose.connect("mongodb://localhost:27017/e-comm");
+const main = async () => {
+  await mongoose.connect("mongodb://localhost:27017/e-comm");
 
-//   const ProductSchema = new mongoose.Schema({
-//     name: String,
-//     price: Number,
-//     brand: String,
-//     category: String
-//   });
+  const ProductSchema = new mongoose.Schema({
+    name: String,
+    price: Number,
+    brand: String,
+    category: String
+  });
 
-//   const ProductsModel = mongoose.model("products", ProductSchema);
+  const ProductsModel = mongoose.model("products", ProductSchema);
 
 //   let data = new ProductsModel({
-//     name: "shirt1",
+//     name: "shirt3",
 //     price: 100,
 //     brand: "nike",
 //     category: "shirt"
 //   });
 
 //   let result = await data.save();
-// };
 
-// main();
+
+// 40 update data
+// const updateinDB = async ()=>{
+//     const Product = mongoose.model('products', ProductSchema)
+
+//     let data = await Product.updateOne(
+//         { name: "shirt3" },
+//         { $set: { price: 200 } }
+//     )
+// }
+// updateinDB();
+
+// const deleteDB = async ()=>{
+//     const Product = mongoose.model('products', ProductSchema)
+
+//     let data = await Product.deleteOne(
+//         { name: "shirt3" }
+//     )
+// }
+// deleteDB();
+
+
+
+
+};
+
+main();
+

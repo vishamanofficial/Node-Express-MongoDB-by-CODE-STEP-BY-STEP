@@ -12,8 +12,8 @@ const insert = async () => {
             },
             {
                 name: 'mona',
-                brand: 'apple',
-                price: 29999,
+                brand: 'darling',
+                price: 'infinity',
                 category:'mobile'
             },
             {

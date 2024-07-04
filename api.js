@@ -7,7 +7,7 @@ app.get('/', async (req, res) => {
     data = await data.find().toArray();
     res.send(data);
 });
-
+app.listen(5000)
 // app.post('/', async (req, res) => {
 //     let data = await dbConnect();
 //     let result = await data.insertMany(req.body);
