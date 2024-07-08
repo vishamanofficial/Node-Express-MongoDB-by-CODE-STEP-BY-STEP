@@ -229,9 +229,6 @@ const main = async () => {
 // }
 // deleteDB();
 
-
-
 };
 
 main();
-
