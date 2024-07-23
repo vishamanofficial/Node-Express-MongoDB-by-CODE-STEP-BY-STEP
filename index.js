@@ -185,19 +185,19 @@
 
 // 39
 
-const mongoose = require("mongoose");
+// const mongoose = require("mongoose");
 
-const main = async () => {
-  await mongoose.connect("mongodb://localhost:27017/e-comm");
+// const main = async () => {
+//   await mongoose.connect("mongodb://localhost:27017/e-comm");
 
-  const ProductSchema = new mongoose.Schema({
-    name: String,
-    price: Number,
-    brand: String,
-    category: String
-  });
+//   const ProductSchema = new mongoose.Schema({
+//     name: String,
+//     price: Number,
+//     brand: String,
+//     category: String
+//   });
 
-  const ProductsModel = mongoose.model("products", ProductSchema);
+//   const ProductsModel = mongoose.model("products", ProductSchema);
 
 //   let data = new ProductsModel({
 //     name: "shirt3",
@@ -229,6 +229,11 @@ const main = async () => {
 // }
 // deleteDB();
 
-};
+// };
 
-main();
+// main();
+
+
+// const os = require('os');
+
+// console.log(os.totalmem()/(1024*1024*1024));
